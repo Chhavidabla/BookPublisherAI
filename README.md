@@ -62,7 +62,7 @@ book-publisher-ai/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/book-publisher-ai.git
+   git clone https://github.com/Chhavidabla/book-publisher-ai.git
    cd book-publisher-ai
    ```
 
