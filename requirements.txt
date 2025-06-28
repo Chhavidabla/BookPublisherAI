@@ -1,0 +1,54 @@
+# Core dependencies
+playwright>=1.40.0
+google-generativeai>=0.3.0
+chromadb>=0.4.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Web scraping and automation
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+aiohttp>=3.8.0
+
+# AI and ML
+openai>=1.0.0  # Optional alternative to Gemini
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+
+# Data processing
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+jsonschema>=4.17.0
+
+# UI and interface
+streamlit>=1.28.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# Utilities
+click>=8.1.0
+tqdm>=4.65.0
+python-dateutil>=2.8.0
+pathlib>=1.0.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Database and storage
+sqlite3  # Built-in
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+
+# Image processing (for screenshots)
+Pillow>=10.0.0
+
+# Async support
+asyncio  # Built-in
+aiofiles>=23.0.0
+
+# Logging and monitoring
+loguru>=0.7.0
+prometheus-client>=0.17.0

@@ -1,0 +1,95 @@
+{
+  "gemini_api_key": "your_gemini_api_key_here",
+  "output_dir": "output",
+  "chromadb_path": "content_db",
+  
+  "scraping": {
+    "delay_between_requests": 2,
+    "max_retries": 3,
+    "screenshot_full_page": true,
+    "user_agent": "Mozilla/5.0 (compatible; BookPublisher-AI/1.0)",
+    "timeout": 30000
+  },
+  
+  "ai_agents": {
+    "writer": {
+      "default_style": "literary",
+      "creativity_level": 0.7,
+      "target_length": "similar",
+      "preserve_meaning": true,
+      "model_name": "gemini-pro",
+      "temperature": 0.7,
+      "max_tokens": 4000
+    },
+    "reviewer": {
+      "quality_threshold": 0.7,
+      "max_iterations": 3,
+      "review_criteria": [
+        "content_quality",
+        "narrative_flow",
+        "language_quality",
+        "originality",
+        "engagement"
+      ],
+      "model_name": "gemini-pro"
+    },
+    "editor": {
+      "final_polish": true,
+      "style_consistency": true,
+      "grammar_check": true,
+      "readability_optimization": true,
+      "model_name": "gemini-pro"
+    }
+  },
+  
+  "human_review": {
+    "require_approval": true,
+    "allow_multiple_reviewers": true,
+    "review_timeout_hours": 24,
+    "min_approval_score": 7,
+    "enable_comments": true,
+    "enable_editing": true
+  },
+  
+  "storage": {
+    "chromadb_settings": {
+      "persist_directory": "content_db",
+      "collection_name": "book_content",
+      "embedding_model": "all-MiniLM-L6-v2"
+    },
+    "versioning": {
+      "max_versions_per_content": 10,
+      "enable_compression": true,
+      "backup_enabled": true
+    }
+  },
+  
+  "search": {
+    "rl_algorithm": {
+      "enabled": true,
+      "learning_rate": 0.01,
+      "exploration_rate": 0.1,
+      "reward_decay": 0.95
+    },
+    "semantic_search": {
+      "enabled": true,
+      "similarity_threshold": 0.7,
+      "max_results": 10
+    }
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "log_file": "logs/workflow.log",
+    "enable_console": true,
+    "max_file_size": "10MB",
+    "backup_count": 5
+  },
+  
+  "performance": {
+    "max_concurrent_tasks": 3,
+    "api_rate_limit": 60,
+    "memory_limit_mb": 2048,
+    "enable_caching": true
+  }
+}
